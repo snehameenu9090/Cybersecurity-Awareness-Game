@@ -1,65 +1,67 @@
 # Cybersecurity-Awareness-Game
-A desktop-based Java application designed to improve cybersecurity awareness through interactive quizzes, cybersecurity tips, and score tracking.
+Week 1 Report:roject Inception & Architecture
+📋 1. Executive Summary & Project Vision
+Modern digital ecosystems face an escalating volume of cyber threats, ranging from sophisticated phishing campaigns and social engineering attacks to weak credential management. Unfortunately, traditional cybersecurity training is often dense, theoretical, and unengaging for students and everyday internet users.
 
-## Day 1 – Project Initialization
+To bridge this gap, Week 1 establishes the foundation of the Cybersecurity Awareness Game—an interactive, desktop-based educational application designed to gamify cybersecurity learning. Built using Java Swing and SQLite, the project combines structured multi-module quizzes, dual-language localization (English & Hinglish), hands-on mini-game simulations, and persistent user progress tracking into a clean, modular architecture.
 
-### Project Title
-Cybersecurity Awareness Game
+🎯 2. Core Problem Statement & Solution Architecture
+The Challenge: Creating a lightweight, offline-accessible learning tool that makes digital hygiene rules intuitive, engaging, and accessible to a regional audience without requiring complex web infrastructure.
 
-### Project Type
-Desktop-Based Java Application
+Our Solution: An engineered desktop application implementing a strict Model-View-Controller (MVC) design pattern to cleanly decouple presentation elements, business logic, and database persistence.
 
-### Project Overview
-Cybersecurity Awareness Game is a desktop-based application developed
-to improve users' awareness of cybersecurity threats and safe online
-practices through an interactive quiz and game-based approach.
+Key Value Propositions:
+Bilingual Accessibility: Seamless switching between Hinglish and English instruction modes, broadening the user reach.
 
-### Problem Statement
-Many users are unaware of common cybersecurity threats such as phishing,
-weak passwords, malware, social engineering, and online scams. This project
-aims to provide an interactive and simple way to learn basic cybersecurity
-concepts.
+Gamified Reinforcement: Integration of a dedicated practice arena (CyberGameArena) featuring real-time password strength evaluation, safe browsing simulators, and phishing URL detectors.
 
-### Project Goal
-The main goal of this project is to create an interactive cybersecurity
-awareness platform where users can learn cybersecurity concepts and test
-their knowledge through quizzes.
+Robust Data Persistence: Embedded SQLite transactional storage (cybergame.db) that records user profiles, language preferences, and performance scores securely.
 
-### Objectives
-- To create awareness about common cybersecurity threats.
-- To educate users about safe online practices.
-- To provide an interactive cybersecurity quiz.
-- To calculate and store user scores.
-- To track user performance.
-- To provide cybersecurity tips.
+Fault-Tolerant Multimedia: Programmatic audio fanfare generation and particle-based celebrations (PartyPopperCelebrationDialog) isolated via multi-threading to ensure zero UI thread starvation.
 
-### Target Users
-- Students
-- Beginners
-- General computer and internet users
-- Users interested in learning basic cybersecurity
+🛠️ 3. Technical Stack & Engineering Specifications
+The project utilizes a robust, industry-standard technology stack optimized for desktop environments:
 
-### Proposed Technologies
-- Java
-- Java Swing
-- MySQL
-- JDBC
-- Eclipse IDE
-- Git
-- GitHub
+Core Programming Language: Java (JDK 17+)
 
-### Initial Project Features
-- User Registration
-- User Login
-- Cybersecurity Quiz
-- Multiple Choice Questions
-- Score Calculation
-- Score Storage
-- Progress Tracking
-- Leaderboard
-- Cybersecurity Tips
+GUI & Rendering Framework: Java Swing, AWT, Custom Anti-Aliased Graphics (Graphics2D, Custom ShapeButton components)
 
-### Day 1 Outcome
-The project idea was finalized, the project scope and objectives were
-defined, the target users were identified, and the initial GitHub
-repository structure was created.
+Architectural Pattern: Model-View-Controller (SoC - Separation of Concerns)
+
+Database Management System: SQLite via JDBC (sqlite-jdbc driver) for ACID-compliant local storage
+
+Concurrency & Safety: Dedicated background worker threads for audio synthesis and timer loops, protecting the Event Dispatch Thread (EDT)
+
+📂 4. Modular Codebase Scaffolding
+To maintain high cohesion and low coupling, the project repository is structured into five distinct, decoupled component classes:
+
+Cybersecurity-Awareness-Game/
+│
+├── src/
+│   │
+│   ├── cybergame/
+│   │   ├── CyberMain.java         # Application Entry Point & Native Look-and-Feel Bootstrap
+│   │   ├── CyberModel.java        # State Repository, Multi-Language Dataset & Quiz Banks
+│   │   ├── CyberView.java         # UI Theme Palettes & Reusable Rounded Custom Components
+│   │   ├── CyberController.java   # Business Logic, Quiz Engine, CardLayout Routing & JDBC Bridge
+│   │   └── CyberGameArena.java    # Interactive Mini-Games Sandbox & Threat Simulators
+│
+├── docs/                          # Engineering artifacts, SRS documents, and UML specifications
+├── assets/                        # Audio wave generators and multimedia UI assets
+├── .gitignore                     # Exclusion rules for local SQLite databases (.db) and bytecode (.class)
+└── README.md                      # Comprehensive system documentation index
+✔️ 5. Week 1 Milestones & Deliverables Checklist
+[x] Concept Finalization & Feasibility: Defined project scope around 5 essential threat modules (Phishing, Passwords, Malware, Social Engineering, Safe Browsing).
+
+[x] Architectural Blueprint: Established strict MVC boundaries across CyberMain, CyberModel, CyberView, CyberController, and CyberGameArena.
+
+[x] Localization Architecture: Implemented a 3D jagged array structure (String[][][]) for rapid, index-bound bilingual content switching.
+
+[x] Database Schema Initialization: Configured SQLite auto-creation logic for secure user session and score tracking tables.
+
+[x] Repository Structuring: Initialized professional Git repository hierarchy and version control baseline.
+
+⏭️ 6. Roadmap Preview: Week 2 Objectives
+Software Requirements Specification (SRS): Formalizing functional actors, use-case boundaries, and non-functional performance criteria.
+
+UML System Modeling: Constructing detailed Class Diagrams and Sequence Diagrams mapping the exact method invocation flow between controller logic and database transactions.
