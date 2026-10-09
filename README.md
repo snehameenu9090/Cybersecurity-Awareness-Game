@@ -35,7 +35,7 @@ Concurrency & Safety: Dedicated background worker threads for audio synthesis an
 📂 4. Modular Codebase Scaffolding
 To maintain high cohesion and low coupling, the project repository is structured into five distinct, decoupled component classes:
 
-Cybersecurity-Awareness-Game/
+###Cybersecurity-Awareness-Game/
 │
 ├── src/
 │   │
