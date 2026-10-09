@@ -1,11 +1,11 @@
 # Cybersecurity-Awareness-Game
 Week 1 Report:roject Inception & Architecture
-📋 1. Executive Summary & Project Vision
+# 📋 1. Executive Summary & Project Vision
 Modern digital ecosystems face an escalating volume of cyber threats, ranging from sophisticated phishing campaigns and social engineering attacks to weak credential management. Unfortunately, traditional cybersecurity training is often dense, theoretical, and unengaging for students and everyday internet users.
 
 To bridge this gap, Week 1 establishes the foundation of the Cybersecurity Awareness Game—an interactive, desktop-based educational application designed to gamify cybersecurity learning. Built using Java Swing and SQLite, the project combines structured multi-module quizzes, dual-language localization (English & Hinglish), hands-on mini-game simulations, and persistent user progress tracking into a clean, modular architecture.
 
-🎯 2. Core Problem Statement & Solution Architecture
+# 🎯 2. Core Problem Statement & Solution Architecture
 The Challenge: Creating a lightweight, offline-accessible learning tool that makes digital hygiene rules intuitive, engaging, and accessible to a regional audience without requiring complex web infrastructure.
 
 Our Solution: An engineered desktop application implementing a strict Model-View-Controller (MVC) design pattern to cleanly decouple presentation elements, business logic, and database persistence.
@@ -19,7 +19,7 @@ Robust Data Persistence: Embedded SQLite transactional storage (cybergame.db) th
 
 Fault-Tolerant Multimedia: Programmatic audio fanfare generation and particle-based celebrations (PartyPopperCelebrationDialog) isolated via multi-threading to ensure zero UI thread starvation.
 
-🛠️ 3. Technical Stack & Engineering Specifications
+# 🛠️ 3. Technical Stack & Engineering Specifications
 The project utilizes a robust, industry-standard technology stack optimized for desktop environments:
 
 Core Programming Language: Java (JDK 17+)
@@ -32,10 +32,10 @@ Database Management System: SQLite via JDBC (sqlite-jdbc driver) for ACID-compli
 
 Concurrency & Safety: Dedicated background worker threads for audio synthesis and timer loops, protecting the Event Dispatch Thread (EDT)
 
-📂 4. Modular Codebase Scaffolding
+# 📂 4. Modular Codebase Scaffolding
 To maintain high cohesion and low coupling, the project repository is structured into five distinct, decoupled component classes:
 
-###Cybersecurity-Awareness-Game/
+## Cybersecurity-Awareness-Game/
 │
 ├── src/
 │   │
@@ -61,7 +61,7 @@ To maintain high cohesion and low coupling, the project repository is structured
 
 [x] Repository Structuring: Initialized professional Git repository hierarchy and version control baseline.
 
-⏭️ 6. Roadmap Preview: Week 2 Objectives
+# ⏭️ 6. Roadmap Preview: Week 2 Objectives
 Software Requirements Specification (SRS): Formalizing functional actors, use-case boundaries, and non-functional performance criteria.
 
 UML System Modeling: Constructing detailed Class Diagrams and Sequence Diagrams mapping the exact method invocation flow between controller logic and database transactions.
